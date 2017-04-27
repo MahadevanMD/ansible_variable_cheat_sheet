@@ -1,6 +1,15 @@
 ---
 - hosts: all
   tasks:
+    - name: ansible_hostname output
+      debug: msg="{{ansible_hostname}}"
+
+    - name: ansible_default_ipv4 output
+      debug: msg="{{ansible_default_ipv4}}"
+
+    - name: ansible_env output
+      debug: msg="{{ansible_env}}"
+
     - name: inventory_file output
       debug: msg="{{inventory_file}}"
 
@@ -22,3 +31,8 @@
     - name: play_hosts output
       debug: msg="{{play_hosts}}"
     
+    - name: environment output
+      debug: msg="{{environment}}"
+
+    - name: hostvars output
+      debug: msg="{{hostvars}}"
