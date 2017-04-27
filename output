@@ -1,0 +1,111 @@
+
+PLAY [all] ********************************************************************************************************
+
+TASK [Gathering Facts] ********************************************************************************************
+ok: [boy]
+ok: [handsome]
+
+TASK [inventory_file output] **************************************************************************************
+ok: [handsome] => {
+    "changed": false, 
+    "msg": "/home/pichuang/ansible_variable_cheat_sheat/hosts"
+}
+ok: [boy] => {
+    "changed": false, 
+    "msg": "/home/pichuang/ansible_variable_cheat_sheat/hosts"
+}
+
+TASK [inventory_dir output] ***************************************************************************************
+ok: [handsome] => {
+    "changed": false, 
+    "msg": "/home/pichuang/ansible_variable_cheat_sheat"
+}
+ok: [boy] => {
+    "changed": false, 
+    "msg": "/home/pichuang/ansible_variable_cheat_sheat"
+}
+
+TASK [inventory_hostname output] **********************************************************************************
+ok: [handsome] => {
+    "changed": false, 
+    "msg": "handsome"
+}
+ok: [boy] => {
+    "changed": false, 
+    "msg": "boy"
+}
+
+TASK [inventory_hostname_short output] ****************************************************************************
+ok: [handsome] => {
+    "changed": false, 
+    "msg": "handsome"
+}
+ok: [boy] => {
+    "changed": false, 
+    "msg": "boy"
+}
+
+TASK [group_names output] *****************************************************************************************
+ok: [handsome] => {
+    "changed": false, 
+    "msg": [
+        "core"
+    ]
+}
+ok: [boy] => {
+    "changed": false, 
+    "msg": [
+        "core"
+    ]
+}
+
+TASK [groups output] **********************************************************************************************
+ok: [handsome] => {
+    "changed": false, 
+    "msg": {
+        "all": [
+            "handsome", 
+            "boy"
+        ], 
+        "core": [
+            "handsome", 
+            "boy"
+        ], 
+        "ungrouped": []
+    }
+}
+ok: [boy] => {
+    "changed": false, 
+    "msg": {
+        "all": [
+            "handsome", 
+            "boy"
+        ], 
+        "core": [
+            "handsome", 
+            "boy"
+        ], 
+        "ungrouped": []
+    }
+}
+
+TASK [play_hosts output] ******************************************************************************************
+ok: [handsome] => {
+    "changed": false, 
+    "msg": [
+        "handsome", 
+        "boy"
+    ]
+}
+ok: [boy] => {
+    "changed": false, 
+    "msg": [
+        "handsome", 
+        "boy"
+    ]
+}
+
+PLAY RECAP ********************************************************************************************************
+boy                        : ok=8    changed=0    unreachable=0    failed=0   
+handsome                   : ok=8    changed=0    unreachable=0    failed=0   
+

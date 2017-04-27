@@ -1,0 +1,24 @@
+---
+- hosts: all
+  tasks:
+    - name: inventory_file output
+      debug: msg="{{inventory_file}}"
+
+    - name: inventory_dir output
+      debug: msg="{{inventory_dir}}"
+
+    - name: inventory_hostname output
+      debug: msg="{{inventory_hostname}}"
+
+    - name: inventory_hostname_short output
+      debug: msg="{{inventory_hostname_short}}"
+
+    - name: group_names output
+      debug: msg="{{group_names}}"
+
+    - name: groups output
+      debug: msg="{{groups}}"
+
+    - name: play_hosts output
+      debug: msg="{{play_hosts}}"
+    
